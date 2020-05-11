@@ -30,13 +30,16 @@ describe('AppComponent', () => {
   it('should contain links to Alex and Jake\'s github accounts', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const debug = fixture.debugElement;
-    expect(debug.query(By.css('a')).nativeElement.getAttribute('href').toEqual('https://github.com/alex-wzm https://github.com/jc1138'));
+    const link1 = debug.query(By.css('#alex-link')).nativeElement.getAttribute('href');
+    const link2 = debug.query(By.css('#jake-link')).nativeElement.getAttribute('href');
+    expect(link1).toEqual('https://github.com/alex-wzm');
+    expect(link2).toEqual('https://github.com/jc1138');
   })
 
   it('should display the login button', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const debug = fixture.debugElement;
-    const loginButton = debug.query(By.css('login')).componentInstance;
+    const loginButton = debug.query(By.css('.login')).componentInstance;
     expect(loginButton).toBeTruthy();
   })
 });
