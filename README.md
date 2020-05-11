@@ -1,6 +1,10 @@
 # SimpleAngularApp
 
-Learning Angular by implementing basic web app functionality.
+Learning Angular by implementing basic web app functionality. Development flow will be test-driven:
+1. write unit tests in `test`
+2. merge `test` -> `develop`; write code in `develop`
+3. merge `develop` -> `test`; code tested in `test`; repeat steps 2 and 3 until all tests pass
+4. push `test` -> `master`
 
 # Angular CLI default README
 
